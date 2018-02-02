@@ -102,17 +102,17 @@
 \section{基本概念}
 这里不再赘述我们已经熟知的定义，只给出它们的英文，必要时加些注记。\href{http://iscasmc.ios.ac.cn/DM2016/annotated2.pdf}{讲义}
 
-\begin{enumerate}
-\item[•]\textbf{补集}（complement）：$\overline{A}\coloneqq C_UA$
-\item[•]\textbf{幂集}（power set）：$S$的\textbf{幂集}是其全部子集的集合，记作$\mathcal{P}(S)$或$2^S$
-\item[•]\textbf{定义域}（domain）、\textbf{陪域}（codomain）、\textbf{像}（image）、\textbf{原像}（preimage）
-\item[•]\textbf{值域/像集}（range，image）：$\mathrm{range}(f)\coloneqq\{b\in B\mid\exists a\in A,f(a)=b\}$
-\item[•]\textbf{单射}（injection，one-to-one）\\\textbf{满射}（surjection，onto）\\\textbf{双射}（bijection，one-to-one correspondence）
-\item[•]\textbf{\textbf{反函数}}（inverse function），记作$f^{-1}$
-\item[•]函数的\textbf{复合}（composition）：$(f\circ g)(a)=f(g(a))$
-\item[•]\textbf{限制}（restriction）：$f|_D$表示$f$在$D\subseteq A$上的限制
-\item[•]函数的\textbf{类型}（type）：即函数的定义域和陪域，比如$Id\to\mathbb{N},Qx\times FOF\to FOF ,2^{AP}\to\{\mathbf{T},\mathbf{F}\}$等等，有时候题目会要你指明函数的类型（\emph{Provide a function $f$, including its type...}）就是要你写出这个。
-\end{enumerate}
+\begin{itemize}
+\item \textbf{补集}（complement）：$\overline{A}\coloneqq C_UA$
+\item \textbf{幂集}（power set）：$S$的\textbf{幂集}是其全部子集的集合，记作$\mathcal{P}(S)$或$2^S$
+\item \textbf{定义域}（domain）、\textbf{陪域}（codomain）、\textbf{像}（image）、\textbf{原像}（preimage）
+\item \textbf{值域/像集}（range，image）：$\mathrm{range}(f)\coloneqq\{b\in B\mid\exists a\in A,f(a)=b\}$
+\item \textbf{单射}（injection，one-to-one）\\\textbf{满射}（surjection，onto）\\\textbf{双射}（bijection，one-to-one correspondence）
+\item \textbf{\textbf{反函数}}（inverse function），记作$f^{-1}$
+\item 函数的\textbf{复合}（composition）：$(f\circ g)(a)=f(g(a))$
+\item \textbf{限制}（restriction）：$f|_D$表示$f$在$D\subseteq A$上的限制
+\item 函数的\textbf{类型}（type）：即函数的定义域和陪域，比如$Id\to\mathbb{N},Qx\times FOF\to FOF ,2^{AP}\to\{\mathbf{T},\mathbf{F}\}$等等，有时候题目会要你指明函数的类型（\emph{Provide a function $f$, including its type...}）就是要你写出这个。
+\end{itemize}
 \section{基数}
 \paragraph{等势}称集合$A$和集合$B$\textbf{等势}（equipollent，have the same cardinality）当且仅当（iff）存在$A$到$B$的一一映射，记作$|A|=|B|$。
 
@@ -190,12 +190,12 @@ g(s),&\text{若}g(x)\not\in D;
 
 用反证法，假设$|A|=|2^A|$，那么有双射$f:A\to 2^A$。令$B=\{x\in A\mid x\not\in f(x)\}\subseteq A$。因为$B\in 2^A$，故$\exists c\in A, f(c)=B$。若$c\in B$，则$c\in f(C)$，与$B$的定义矛盾；若$c\not\in B$，则$c$满足$B$的定义却不在$B$中，也矛盾，命题得证。\hfill\qed
 \paragraph{几个明显但实用的结论}
-\begin{enumerate}
-\item[•]$|(0,1)|=|\mathbb{R}|$（双射取正切函数）
-\item[•]$|(0,1]|=|[1,\infty )|$（取倒数）
-\item[•]$|[0,1]|=|(0,1]|=|[0,1)|=|(0,1)|$
-\item[•]$|[0,1]|=|[0,k]|=|[0,\infty)|=|\mathbb{R}|$
-\end{enumerate}
+\begin{itemize}
+\item $|(0,1)|=|\mathbb{R}|$（双射取正切函数）
+\item $|(0,1]|=|[1,\infty )|$（取倒数）
+\item $|[0,1]|=|(0,1]|=|[0,1)|=|(0,1)|$
+\item $|[0,1]|=|[0,k]|=|[0,\infty)|=|\mathbb{R}|$
+\end{itemize}
 \section{康托尔的对角论证法}
 \paragraph{康托尔对角论证法(Cantor's diagonal argument)}\textit{实数集$\mathbb{R}$不可数。}
 \paragraph{证明}我们只要证明$(0,1)$不可数即可。
@@ -218,24 +218,24 @@ f(0) & 0.d_{00}d_{01}d_{02}d_{03}\cdots
 \subsection{证明与集合的势相关的命题}
 \subsubsection{证明集合可数}
 证明集合$A$可数的方法有：
-\begin{enumerate}
-\item[•]直接构造一个$A$和$\mathbb{N}$之间的双射；
-\item[•]构造一个$A$到$\mathbb{N}$的单射（参见哥德尔编码，\ref{godel}），然后说明$A$是无限集；
-\item[•]仿照命题1的证明（\ref{basicprop1}），构造表格Z字形（zig-zag）计数；
-\item[•]证明$A$是可数个可数集的并。
-\end{enumerate}
+\begin{itemize}
+\item 直接构造一个$A$和$\mathbb{N}$之间的双射；
+\item 构造一个$A$到$\mathbb{N}$的单射（参见哥德尔编码，\ref{godel}），然后说明$A$是无限集；
+\item 仿照命题1的证明（\ref{basicprop1}），构造表格Z字形（zig-zag）计数；
+\item 证明$A$是可数个可数集的并。
+\end{itemize}
 \subsubsection{证明集合不可数}
-\begin{enumerate}
-\item[•]利用康托尔的对角论证法；
-\item[•]构造到$\mathbb{R}$等不可数集合的双射。
-\end{enumerate}
+\begin{itemize}
+\item 利用康托尔的对角论证法；
+\item 构造到$\mathbb{R}$等不可数集合的双射。
+\end{itemize}
 \subsubsection{证明两个集合等势}
 证明集合$A$和集合$B$等势的方法有：
-\begin{enumerate}
-\item[•]构造一个$A$和$B$之间的双射；
-\item[•]分别构造$A$到$B$和$B$到$A$的单射，于是$|A|\leq |B|,|B|\leq |A|$，由Schr\"oder-Bernstein定理得出$|A|=|B|$；
-\item[•]利用作业2中的结论：\Red{如果集合$A$不可数，$B$可数，那么$|A\setminus B|=|A|$。}
-\end{enumerate}
+\begin{itemize}
+\item 构造一个$A$和$B$之间的双射；
+\item 分别构造$A$到$B$和$B$到$A$的单射，于是$|A|\leq |B|,|B|\leq |A|$，由Schr\"oder-Bernstein定理得出$|A|=|B|$；
+\item 利用作业2中的结论：\Red{如果集合$A$不可数，$B$可数，那么$|A\setminus B|=|A|$。}
+\end{itemize}
 \paragraph{例题}设$A$是有$n$个元素的字母表（$n>0$）。\label{alphabet}
 \begin{enumerate}
 \item 设$S_k$是全部长度为$k\geq 0$的有限长字符串的集合。求$|S_k|$。
@@ -243,11 +243,11 @@ f(0) & 0.d_{00}d_{01}d_{02}d_{03}\cdots
 \item 令$S_\infty$为字母从$A$中取出的所有无限长字符串的集合。说明$n=1$时，集合是有限集；对$n\geq 2$，利用康托尔对角论证法说明$S_\infty$不可数。
 \end{enumerate}
 \subsection{二进制数与0-1串}
-\begin{enumerate}
-\item[•]任意实数都有不以无穷多个0结尾的二进制表示。
-\item[•]无限长二进制串（infinite binary string）的集合与$[0,1]$或$\mathbb{R}$等势。
-\item[•]所有无限长二进制串的集合是不可数的。（从上一点能看出来，但可以用对角论证法直接说明）。
-\end{enumerate}
+\begin{itemize}
+\item 任意实数都有不以无穷多个0结尾的二进制表示。
+\item 无限长二进制串（infinite binary string）的集合与$[0,1]$或$\mathbb{R}$等势。
+\item 所有无限长二进制串的集合是不可数的。（从上一点能看出来，但可以用对角论证法直接说明）。
+\end{itemize}
 \chapter{命题逻辑}
 \vspace*{\fill}
 \begin{center}
@@ -265,18 +265,18 @@ f(0) & 0.d_{00}d_{01}d_{02}d_{03}\cdots
 \[\varphi\Coloneqq p\in AP\mid \neg\varphi\mid\varphi\land\varphi\]
 
 这是一个递归的定义，应该这样理解：
-\begin{enumerate}
-\item[•]原子命题$p\in AP$是公式；
-\item[•]对公式做否定（$\neg\varphi$）或对两个公式做合取（$\varphi\land\psi$），这样复合得到的也是一个公式。
-\end{enumerate}
+\begin{itemize}
+\item 原子命题$p\in AP$是公式；
+\item 对公式做否定（$\neg\varphi$）或对两个公式做合取（$\varphi\land\psi$），这样复合得到的也是一个公式。
+\end{itemize}
 
 接下来可以导出一些运算符：
-\begin{enumerate}
-\item[•]析取（\emph{disjunction}）：$\varphi\lor\psi\coloneqq \neg(\neg\varphi\land\neg\psi)$；
-\item[•]蕴含（\emph{implication}）：$\varphi\rightarrow\psi\coloneqq\varphi\rightarrow\psi$；
-\item[•]双向蕴含，即等价（\emph{bi-implication}）：$\varphi\leftrightarrow\psi\coloneqq (\varphi\rightarrow\psi)\land(\psi\rightarrow\varphi)$；
-\item[•]\Blue{异或（\emph{exclusive or}）：$\varphi\oplus\psi\coloneqq (\varphi\lor\psi)\land(\neg(\varphi\land\psi ))$（二者居其一）。}
-\end{enumerate}
+\begin{itemize}
+\item 析取（\emph{disjunction}）：$\varphi\lor\psi\coloneqq \neg(\neg\varphi\land\neg\psi)$；
+\item 蕴含（\emph{implication}）：$\varphi\rightarrow\psi\coloneqq\varphi\rightarrow\psi$；
+\item 双向蕴含，即等价（\emph{bi-implication}）：$\varphi\leftrightarrow\psi\coloneqq (\varphi\rightarrow\psi)\land(\psi\rightarrow\varphi)$；
+\item \Blue{异或（\emph{exclusive or}）：$\varphi\oplus\psi\coloneqq (\varphi\lor\psi)\land(\neg(\varphi\land\psi ))$（二者居其一）。}
+\end{itemize}
 
 \textbf{注}\ 对于复合公式，要判断其真假可以列\textbf{真值表}（\emph{truth table}）。运算符的\Blue{优先顺序}：$\neg,\land,\lor,\rightarrow,\leftrightarrow$。
 
@@ -427,17 +427,17 @@ $\bullet$ \Blue{$\sigma\Vdash\varphi\rightarrow\psi$}当且仅当$\sigma\not\Vda
 由此得到重言式和可满足公式的定义：$\varphi$是\textbf{重言式}（tautology），或称\textbf{永真式}，当且仅当对一切赋值有$\sigma\Vdash\varphi$，或者说\Blue{真值表中这一列全为1}；是\textbf{可满足公式}（satisfiable），当且仅当对某些赋值$\sigma\Vdash\varphi$。
 
 \paragraph{语义括号（semantic bracket）}考虑所有赋值的集合$U=2^{AP}$（比如$U$的一个子集$p,q$表示$p,q$为真，其他原子命题为假这一赋值）。\textbf{语义括号}是一个函数$\llbracket\cdot\rrbracket\colon PL\rightarrow 2^U$，定义如下（我们记$\llbracket\cdot\rrbracket (\varphi )$为$\llbracket \varphi\rrbracket$）：
-\begin{enumerate}
-\item[•]如果$p\in AP$，那么$\llbracket p\rrbracket =\{\sigma\in U\mid p\in\sigma\}$；
-\item[•]$\llbracket\neg\varphi\rrbracket=\overline{\llbracket\varphi\rrbracket}$（回忆：上横线表示取补集，也就是说$\overline{\llbracket\varphi\rrbracket}=U\setminus \llbracket\varphi\rrbracket$）；
-\item[•]$\llbracket\varphi\to\psi\rrbracket =\overline{\llbracket\varphi\rrbracket}\cup\llbracket\psi\rrbracket$。
-\end{enumerate}
+\begin{itemize}
+\item 如果$p\in AP$，那么$\llbracket p\rrbracket =\{\sigma\in U\mid p\in\sigma\}$；
+\item $\llbracket\neg\varphi\rrbracket=\overline{\llbracket\varphi\rrbracket}$（回忆：上横线表示取补集，也就是说$\overline{\llbracket\varphi\rrbracket}=U\setminus \llbracket\varphi\rrbracket$）；
+\item $\llbracket\varphi\to\psi\rrbracket =\overline{\llbracket\varphi\rrbracket}\cup\llbracket\psi\rrbracket$。
+\end{itemize}
 
 由此可以看出，语义括号给出了一个命题所有可满足性赋值的集合。对于导出运算符析取和合取，它的定义也是明显的：
-\begin{enumerate}
-\item[•]$\llbracket\varphi\lor\psi\rrbracket =\llbracket\varphi\rrbracket\cup\llbracket\psi\rrbracket$；
-\item[•]$\llbracket\varphi\land\psi\rrbracket =\llbracket\varphi\rrbracket\cap\llbracket\psi\rrbracket$。
-\end{enumerate}
+\begin{itemize}
+\item $\llbracket\varphi\lor\psi\rrbracket =\llbracket\varphi\rrbracket\cup\llbracket\psi\rrbracket$；
+\item $\llbracket\varphi\land\psi\rrbracket =\llbracket\varphi\rrbracket\cap\llbracket\psi\rrbracket$。
+\end{itemize}
 
 两个命题等价也可以用语义括号表述：$\varphi\equiv\psi\Leftrightarrow\llbracket\varphi\rrbracket =\llbracket\psi\rrbracket$。
 
@@ -497,11 +497,11 @@ $\bullet$ \Blue{$\sigma\Vdash\varphi\rightarrow\psi$}当且仅当$\sigma\not\Vda
 \paragraph{等价性的证明}要证明$\varphi\equiv\psi$，就是要分别找到$\vdash\varphi\to\psi$和$\vdash\psi\to\varphi$的证明序列。如果$\varphi$和$\psi$中含有合取和析取号，先用逻辑等值式（\ref{equivs}）把它们化成非和蕴含。
 \paragraph{例}（讲义的练习1.5.9）$(\rightarrow_{+})$：如果$\Gamma, \varphi\vdash\psi$，则$\Gamma\vdash\varphi\rightarrow\psi$。
 \paragraph{证明}对$\Gamma, \varphi\vdash\psi$的推演序列做归纳（终于来了！）。
-\begin{enumerate}
-\item[•]基石：序列的长度为1。如果$\psi = \varphi$，这就是\textit{Ide}；否则一定有$\psi \in \Gamma$或$\psi$是应用了三条公理之一，又有\Blue{$\in_+$}，故总有$\Gamma\vdash \psi$.。由公理A1，$\Gamma\vdash \psi\rightarrow (\varphi\rightarrow\psi )$，故由分离规则知$\Gamma\vdash\varphi\rightarrow\psi$。
-\item[•]归纳步骤：假设对长度不超过$n$的序列，$\Gamma\vdash\varphi\rightarrow\psi$。如果$\psi\in\Gamma$，前面已证。否则，设推演序列为$\psi_0,\psi_1,\cdots ,\psi_n=\psi$，根据定义，存在$j,k<n$使得$\psi_k=(\psi_j\rightarrow \psi_n)$。根据归纳假设，$\Gamma\vdash\varphi\rightarrow\psi$的推演序列中有公式$\varphi\rightarrow\psi_j$和$\varphi\rightarrow \psi_k$。由公理A2，$(\varphi\rightarrow (\psi_j\rightarrow\psi_n ))\rightarrow ((\varphi\rightarrow\psi_j)\rightarrow(\varphi\rightarrow\psi_n))$。连续用两次分离规则就得到了$\varphi\rightarrow \psi_n =\psi$，归纳步骤就做完了。\hfill\qed
-\end{enumerate}
-\subsection{Hilbert系统的可靠性和完备性}
+\begin{itemize}
+\item 基石：序列的长度为1。如果$\psi = \varphi$，这就是\textit{Ide}；否则一定有$\psi \in \Gamma$或$\psi$是应用了三条公理之一，又有\Blue{$\in_+$}，故总有$\Gamma\vdash \psi$.。由公理A1，$\Gamma\vdash \psi\rightarrow (\varphi\rightarrow\psi )$，故由分离规则知$\Gamma\vdash\varphi\rightarrow\psi$。
+\item 归纳步骤：假设对长度不超过$n$的序列，$\Gamma\vdash\varphi\rightarrow\psi$。如果$\psi\in\Gamma$，前面已证。否则，设推演序列为$\psi_0,\psi_1,\cdots ,\psi_n=\psi$，根据定义，存在$j,k<n$使得$\psi_k=(\psi_j\rightarrow \psi_n)$。根据归纳假设，$\Gamma\vdash\varphi\rightarrow\psi$的推演序列中有公式$\varphi\rightarrow\psi_j$和$\varphi\rightarrow \psi_k$。由公理A2，$(\varphi\rightarrow (\psi_j\rightarrow\psi_n ))\rightarrow ((\varphi\rightarrow\psi_j)\rightarrow(\varphi\rightarrow\psi_n))$。连续用两次分离规则就得到了$\varphi\rightarrow \psi_n =\psi$，归纳步骤就做完了。\hfill\qed
+\end{itemize}
+\subsection{Hilbert~系统的可靠性和完备性}
 \paragraph{公式集的协调性（consistency）}我们说一个公式集$\Gamma$是\textbf{协调的}（\textit{consistent}），当且仅当存在$\varphi$使得$\Gamma\not\vdash\varphi$。此外，我们说$\varphi$关于（w.r.t，with regards to）$\Gamma$是协调的当且仅当$\Gamma\cup\{\varphi\}$是协调的。\label{cons}
 
 也就是说，如果一个公式集协调，那么它必须有证不出的命题。但是这个定义不太直观，而且似乎并没有指出“协调”二字的核心。回顾我们刚才给出的归谬定理1，也就是\Blue{$Abs$}：$\vdash\neg\varphi\to(\varphi\to\psi)$。我们对它做一个小小的变形（用两次$\neg_-$），就得到了$\neg\varphi ,\varphi\vdash\psi$。
@@ -522,9 +522,9 @@ $\bullet$ \Blue{$\sigma\Vdash\varphi\rightarrow\psi$}当且仅当$\sigma\not\Vda
 
 我们对$\Gamma\vdash\varphi$的推演序列$\varphi_1 ,\varphi_2 ,\cdots ,\varphi_n=\varphi$的长度做归纳。也就说，我们要证明对任意长度$n$的序列，$\Gamma\models\varphi$。
 
-\begin{enumerate}
-\item[•]基石：如果证明长度为1（$n = 1$），则定有$\varphi\in\Gamma$或$\varphi$为某条公理，那么自然$\Gamma \models \varphi$。
-\item[•]归纳步骤：假设对长度小于$n$的推演序列，结论成立。那么对$n>1$，$\psi$必然是对前面某两行运用MP规则得到的（回忆推演序列定义的第三条：\ref{dedseq}）。
+\begin{itemize}
+\item 基石：如果证明长度为1（$n = 1$），则定有$\varphi\in\Gamma$或$\varphi$为某条公理，那么自然$\Gamma \models \varphi$。
+\item 归纳步骤：假设对长度小于$n$的推演序列，结论成立。那么对$n>1$，$\psi$必然是对前面某两行运用MP规则得到的（回忆推演序列定义的第三条：\ref{dedseq}）。
 \begin{align*}
 \vdots\ &\ 
 \\i,\ &\Gamma\vdash\psi
@@ -535,7 +535,7 @@ $\bullet$ \Blue{$\sigma\Vdash\varphi\rightarrow\psi$}当且仅当$\sigma\not\Vda
 而$\psi$和$\psi\to\varphi$的推演序列（取前$i$行和前$n-1$行即可）长度都小于$n$，故由归纳假设：
 \[\Gamma\models\psi, \Gamma\models (\psi\to\varphi )\]
 回顾$\models$的定义（见\ref{models}）可知，上面两条意味着，对任意赋值$\sigma$，若$\sigma\Vdash\Gamma$，则$\sigma\Vdash\psi$且$\sigma\Vdash\psi\to\varphi$。而$\sigma\Vdash\psi\to\varphi$当且仅当$\sigma\not\Vdash\psi$或$\sigma\Vdash\varphi$。前者显然不可能（矛盾），因此对任意$\sigma$必有$\sigma\Vdash\varphi$。这正是$\Gamma\models\varphi$的定义，这样就完成了归纳步骤。\hfill\qed
-\end{enumerate}
+\end{itemize}
 
 \paragraph{完备性定理（Completeness）}$\Gamma\models\varphi$则$\Gamma\vdash\varphi$。
 \paragraph{证明}用反证法，假设$\Gamma\not\vdash \varphi$。那么存在赋值$\sigma$使得$\sigma \Vdash\Gamma\cup\left\lbrace \neg\varphi\right\rbrace$。但这种情况下$\sigma \Vdash \Gamma$且$\sigma\not\Vdash\varphi$，与$\Gamma\models\varphi$的前提矛盾。\hfill\qed
@@ -559,11 +559,11 @@ $\bullet$ \Blue{$\sigma\Vdash\varphi\rightarrow\psi$}当且仅当$\sigma\not\Vda
 这样我们就得到了一个赋值：$\sigma\Vdash\Gamma^*$，其中$\sigma=\Gamma^*\cap AP$，它显然也会满足$\Gamma$。\hfill\qed
 \section{技巧整理}
 \subsection{$\vdash,\Vdash,\models$三个记号的对比}
-\begin{enumerate}
-\item[•]$\vdash$：$\Gamma\vdash\varphi$表示存在$\Gamma$到$\varphi$的\textbf{推演序列}。
-\item[•]$\Vdash$：$\sigma\Vdash\varphi$表示赋值$\sigma$\textbf{可以满足}公式$\varphi$（回忆赋值是对公式中的所有原子命题而言的）。
-\item[•]$\models$：若所有满足$\Gamma$的赋值都满足$\varphi$（即$\forall\sigma (\sigma\Vdash\Gamma\rightarrow\sigma\Vdash\varphi)$），则$\Gamma\models\varphi$，表示$\varphi$是$\Gamma$的\textbf{逻辑结果}。
-\end{enumerate}
+\begin{itemize}
+\item $\vdash$：$\Gamma\vdash\varphi$表示存在$\Gamma$到$\varphi$的\textbf{推演序列}。
+\item $\Vdash$：$\sigma\Vdash\varphi$表示赋值$\sigma$\textbf{可以满足}公式$\varphi$（回忆赋值是对公式中的所有原子命题而言的）。
+\item $\models$：若所有满足$\Gamma$的赋值都满足$\varphi$（即$\forall\sigma (\sigma\Vdash\Gamma\rightarrow\sigma\Vdash\varphi)$），则$\Gamma\models\varphi$，表示$\varphi$是$\Gamma$的\textbf{逻辑结果}。
+\end{itemize}
 \paragraph{例子}
 （作业2）\textit{考虑前面定义的语义括号，证明$\models\varphi\rightarrow\psi$当且仅当$\llbracket\varphi\rrbracket\subseteq\llbracket\psi\rrbracket$。}
 \paragraph{证明}
@@ -616,17 +616,17 @@ $X$的前件不是$\psi$，想以$X$为中介做传递好像不太可行。但�
 \clearpage
 \section{基本概念}
 一阶逻辑中我们给定了：\label{folsets}
-\begin{enumerate}
-\item[•]\Blue{变元}（\textit{variable symbol}）的集合$VS=\{x,y,x_1,y_1,\cdots\}$；
-\item[•]\Blue{函词}（\textit{function symbol}）的集合$FS=\{f,g,f_1,\cdots\}$，每个函词都有相应的\Blue{参数个数}（\textit{arity}），相应地称为$n$元函词（\textit{function symbol with arity $n$}）；
-\item[•]\Blue{谓词}（\textit{predicate symbol}）的集合$PS=\{P,Q,P_1,\cdots\}$，每个谓词也有参数个数，相应称$n$元谓词；
-\item[•]如果需要，我们还可以引入\Red{等词}（\textit{equality symbol}）的集合$ES=\{\approx\}$。注意等词要么没有，要么只有一个。
-\end{enumerate}
+\begin{itemize}
+\item \Blue{变元}（\textit{variable symbol}）的集合$VS=\{x,y,x_1,y_1,\cdots\}$；
+\item \Blue{函词}（\textit{function symbol}）的集合$FS=\{f,g,f_1,\cdots\}$，每个函词都有相应的\Blue{参数个数}（\textit{arity}），相应地称为$n$元函词（\textit{function symbol with arity $n$}）；
+\item \Blue{谓词}（\textit{predicate symbol}）的集合$PS=\{P,Q,P_1,\cdots\}$，每个谓词也有参数个数，相应称$n$元谓词；
+\item 如果需要，我们还可以引入\Red{等词}（\textit{equality symbol}）的集合$ES=\{\approx\}$。注意等词要么没有，要么只有一个。
+\end{itemize}
 我们专门指明两个集合：
-\begin{enumerate}
-\item[•]\Blue{常词}（\textit{constant symbol}）的集合$CS=\{a,b,a_1,\cdots\}$，它是$FS$的一个子集，其元素可以视为零元函词；
-\item[•]\Blue{命题符号}（\textit{propositional symbol}）的集合$PS=\{p,q,p_1,q_1,\cdots\}$，它是$PS$的一个子集，元素是零元谓词。
-\end{enumerate}
+\begin{itemize}
+\item \Blue{常词}（\textit{constant symbol}）的集合$CS=\{a,b,a_1,\cdots\}$，它是$FS$的一个子集，其元素可以视为零元函词；
+\item \Blue{命题符号}（\textit{propositional symbol}）的集合$PS=\{p,q,p_1,q_1,\cdots\}$，它是$PS$的一个子集，元素是零元谓词。
+\end{itemize}
 
 接下来我们向一阶逻辑的合式公式迈进，首先定义一阶逻辑的\textbf{原子公式}——\textbf{项}（\textit{term}）。
 \paragraph{项}一阶逻辑的项按下面的规则递归构造：
@@ -636,10 +636,10 @@ $X$的前件不是$\psi$，想以$X$为中介做传递好像不太可行。但�
 \[\varphi\Coloneqq P(t_1,\cdots ,t_n)\mid\neg\varphi\mid\varphi\to\varphi\mid\forall x\varphi\]
 其中$t_1,\cdots ,t_n$是项，$P\in PS$是$n$元谓词，$x\in VS$。
 全部一阶逻辑公式（\underline{f}irst-\underline{o}rder \underline{f}ormulae）的集合$FOF$是满足下面两条性质的最小集合：
-\begin{enumerate}
-\item[•]\Blue{原子公式}$P(t_1,\cdots ,t_n)\in FOF$；
-\item[•]若$\varphi,\psi\in FOF$，则\Blue{复合公式}$\neg\varphi$、$\varphi\to\psi$和$\forall x\varphi$也在$FOF$中。
-\end{enumerate}
+\begin{itemize}
+\item \Blue{原子公式}$P(t_1,\cdots ,t_n)\in FOF$；
+\item 若$\varphi,\psi\in FOF$，则\Blue{复合公式}$\neg\varphi$、$\varphi\to\psi$和$\forall x\varphi$也在$FOF$中。
+\end{itemize}
 
 另外，为了使符号简洁（所谓的\textit{语法糖}，syntactic sugar），我们额外定义\textbf{存在量词}（\textit{existence quantifier}）：$\exists x\varphi\coloneqq \neg\forall x\neg\varphi$。\textbf{全称量词}$\forall$（\textit{universal quantifier}）和存在量词的优先级高于其他运算符。
 
@@ -736,11 +736,11 @@ S_t^x(P(t_1,\cdots ,t_n))&=P(S_t^xt_1,\cdots ,S_t^xt_n)
 \section{语义}
 为了让一阶逻辑的项和公式具有语义，我们需要对函词和谓词通过一定的结构作出合适的\textbf{解释}。
 \paragraph{Tarski结构}\textbf{Tarski结构}（\textit{Tarski structure}）是一个二元组$\mathscr{I}=\langle\mathcal{D},\mathcal{I}\rangle$，其中：
-\begin{enumerate}
-\item[•]$\mathcal{D}$是一个非空集合，称为\Blue{论域}（\textit{\underline{d}omain}），一般是$\mathbb{N},\mathbb{R}$等；
-\item[•]任意$n$元\Red{函词}$f$的\textbf{解释}（\textit{\underline{i}nterpretation}）$\mathcal{I}(f)$是一个$\mathcal{D}^n\to\mathcal{D}$的函数；特别地，对于\Red{常词}$a$，$\mathcal{I}(a)\in\mathcal{D}$。
-\item[•]$n$元\Red{谓词}$P$的解释$\mathcal{I}(P)$是一个$\mathcal{D}^n\to\{0,1\}$的函数。
-\end{enumerate}
+\begin{itemize}
+\item $\mathcal{D}$是一个非空集合，称为\Blue{论域}（\textit{\underline{d}omain}），一般是$\mathbb{N},\mathbb{R}$等；
+\item 任意$n$元\Red{函词}$f$的\textbf{解释}（\textit{\underline{i}nterpretation}）$\mathcal{I}(f)$是一个$\mathcal{D}^n\to\mathcal{D}$的函数；特别地，对于\Red{常词}$a$，$\mathcal{I}(a)\in\mathcal{D}$。
+\item $n$元\Red{谓词}$P$的解释$\mathcal{I}(P)$是一个$\mathcal{D}^n\to\{0,1\}$的函数。
+\end{itemize}
 \paragraph{赋值}某个Tarski结构$\mathscr{I}$（草写体的$I$，手写时写$T$就好）下的\textbf{赋值}（\textit{assignment}）$\sigma$是一个映射$\sigma:VS\to\mathcal D$，$\mathscr{I}$下所有赋值的集合记作$\Sigma_\mathscr{I}$。
 \paragraph{赋值中的替换}定义赋值$\sigma [x/d]:VS\to \mathcal D$，表示将变元$x$映到$d$，其他变元的赋值同$\sigma$原先的定义一样。即：
 \[\sigma [x/d](y)=\begin{cases}
@@ -750,26 +750,26 @@ S_t^x(P(t_1,\cdots ,t_n))&=P(S_t^xt_1,\cdots ,S_t^xt_n)
 其中$y$是赋值作用的变元。
 
 关于解释，我们有结论：
-\begin{enumerate}
-\item[•]闭式在任一解释下确定其真值（变为命题）；
-\item[•]非闭式在一组解释$\mathcal{I}$及$\mathscr{I}$中一个赋值下有一确定真值（变为命题）。
-\end{enumerate}
+\begin{itemize}
+\item 闭式在任一解释下确定其真值（变为命题）；
+\item 非闭式在一组解释$\mathcal{I}$及$\mathscr{I}$中一个赋值下有一确定真值（变为命题）。
+\end{itemize}
 
 第一点我们稍后还会再提到；第二点是容易理解的，因为非闭式中有自由变元，而我们目前为止没有规定如何解释变元。但有了赋值这个变元到论域的映射，我们就可以对由变元及变元与函词构造的项（如果又忘记了，请再次回顾\ref{terms}）作解释：
 \paragraph{对项作解释}在某个Tarski结构$\mathscr{I}=\langle\mathcal D,\mathcal I\rangle$和赋值$\sigma\in\Sigma_\mathscr I$下，每个项$t$对应解释为一个$\mathcal D$中的元素$\mathscr I(t)(\sigma)$：
-\begin{enumerate}
-\item[•]若$t=x$是变元，则$\mathscr I(t)(\sigma)=\sigma(x)$。
-\item[•]若$t=f(t_1,\cdots ,t_n)$，其中$f$是$n$元函词，则$\mathscr I(t)(\sigma)=\mathcal{I}(f)(\mathscr I(t_1)(\sigma),\cdots ,\mathscr I(t_n)(\sigma))$。
-\end{enumerate}
+\begin{itemize}
+\item 若$t=x$是变元，则$\mathscr I(t)(\sigma)=\sigma(x)$。
+\item 若$t=f(t_1,\cdots ,t_n)$，其中$f$是$n$元函词，则$\mathscr I(t)(\sigma)=\mathcal{I}(f)(\mathscr I(t_1)(\sigma),\cdots ,\mathscr I(t_n)(\sigma))$。
+\end{itemize}
 对于常词$t=a$，自然有$\mathscr I(t)(\sigma)=\mathcal{I}(a)$，与赋值$\sigma$无关。
 
 \paragraph{真值}每个公式$\varphi$都有\textbf{真值}（\textit{truth value}）：$\mathscr I(\varphi)(\sigma )\in\{0,1\}$。我们记$(\mathscr I,\sigma)\Vdash\varphi$若$\mathscr I(\varphi)(\sigma)=1$。
-\begin{enumerate}
-\item[•]若$\varphi=P(t_1,\cdots ,t_n)$，那么$\mathscr I(\varphi)(\sigma)=\mathcal I(P)(\mathscr I(t_1)(\sigma),\cdots ,\mathscr I(t_n)(\sigma))$。\\（回忆：$\mathscr I(t_i)(\sigma)\in\mathcal{D}$，而$\mathcal{I}(P)$是$\mathcal{D}^n\to\{0,1\}$的函数）\\换句话说，$(\mathscr I,\sigma)\Vdash P(t_1,\cdots ,t_n)$当且仅当$\mathcal{I}(P)(\mathscr I(t_1)(\sigma),\cdots ,\mathscr I(t_n)(\sigma))$。
-\item[•]若$\varphi=\neg\psi$，那么$\mathscr I(\varphi)(\sigma)=1-\mathscr I(\psi)(\sigma)$。\\换句话说，$(\mathscr I,\sigma)\Vdash \neg\psi$当且仅当$(\mathscr I,\sigma)\not\Vdash\psi$。
-\item[•]若$\varphi=\psi\to\eta$，那么$\mathscr I(\varphi)(\sigma)=\begin{cases}1&\text{若}\mathscr I(\psi)(\sigma)=0\text{或}\mathscr I(\eta)(\sigma)=1,\\0&\text{若}\mathscr I(\psi)(\sigma)=1\text{且}\mathscr I(\eta)(\sigma)=0.\end{cases}$\\换句话说，$(\mathscr I,\sigma)\Vdash \psi\to\eta$当且仅当$(\mathscr I,\sigma)\Vdash\neg\psi$或$(\mathscr I,\sigma)\Vdash\eta$。
-\item[•]若$\varphi=\forall x\psi$，那么$\mathscr I(\varphi)(\sigma)=\begin{cases}1&\text{若对一切}d\in\mathcal D,\mathscr I(\psi)(\sigma [x/d])=1,\\0&\text{若对某些}d\in\mathcal D,\mathscr I(\psi)(\sigma [x/d])=0.\end{cases}$\\换句话说，$(\mathscr I,\sigma)\Vdash \forall x\psi$当且仅当$\forall d\in\mathcal D,(\mathscr I,\sigma [x/d])\Vdash\psi$。
-\end{enumerate}
+\begin{itemize}
+\item 若$\varphi=P(t_1,\cdots ,t_n)$，那么$\mathscr I(\varphi)(\sigma)=\mathcal I(P)(\mathscr I(t_1)(\sigma),\cdots ,\mathscr I(t_n)(\sigma))$。\\（回忆：$\mathscr I(t_i)(\sigma)\in\mathcal{D}$，而$\mathcal{I}(P)$是$\mathcal{D}^n\to\{0,1\}$的函数）\\换句话说，$(\mathscr I,\sigma)\Vdash P(t_1,\cdots ,t_n)$当且仅当$\mathcal{I}(P)(\mathscr I(t_1)(\sigma),\cdots ,\mathscr I(t_n)(\sigma))$。
+\item 若$\varphi=\neg\psi$，那么$\mathscr I(\varphi)(\sigma)=1-\mathscr I(\psi)(\sigma)$。\\换句话说，$(\mathscr I,\sigma)\Vdash \neg\psi$当且仅当$(\mathscr I,\sigma)\not\Vdash\psi$。
+\item 若$\varphi=\psi\to\eta$，那么$\mathscr I(\varphi)(\sigma)=\begin{cases}1&\text{若}\mathscr I(\psi)(\sigma)=0\text{或}\mathscr I(\eta)(\sigma)=1,\\0&\text{若}\mathscr I(\psi)(\sigma)=1\text{且}\mathscr I(\eta)(\sigma)=0.\end{cases}$\\换句话说，$(\mathscr I,\sigma)\Vdash \psi\to\eta$当且仅当$(\mathscr I,\sigma)\Vdash\neg\psi$或$(\mathscr I,\sigma)\Vdash\eta$。
+\item 若$\varphi=\forall x\psi$，那么$\mathscr I(\varphi)(\sigma)=\begin{cases}1&\text{若对一切}d\in\mathcal D,\mathscr I(\psi)(\sigma [x/d])=1,\\0&\text{若对某些}d\in\mathcal D,\mathscr I(\psi)(\sigma [x/d])=0.\end{cases}$\\换句话说，$(\mathscr I,\sigma)\Vdash \forall x\psi$当且仅当$\forall d\in\mathcal D,(\mathscr I,\sigma [x/d])\Vdash\psi$。
+\end{itemize}
 仔细看“换句话说”后面的内容就会发现，上面这些真值定义都是很直观的，所以这个定义长但是没有什么特别之处。
 \paragraph{例子}考虑下面这个公式：
 \[\varphi=\forall x\forall y(P(x,y)\to P(f(x,a),f(y,a))\]
@@ -782,12 +782,12 @@ $\mathscr{I}=\langle\mathcal{D}=\mathbb{N},\mathcal{I}\rangle$，其中$\mathcal
 \paragraph{定理}（讲义定理3.3.6）闭式在任一解释下有一确定真值（变为命题）。即，$\mathscr I\Vdash\varphi$当且仅当对某个$\sigma\in\Sigma_\mathscr I$，$(\mathscr I,\sigma)\Vdash\varphi$。
 
 \paragraph{满足关系、逻辑结果、等价、普遍有效}
-\begin{enumerate}
-\item[•]记$(\mathscr I,\sigma)\Vdash\Gamma$，如果对一切$\eta\in\Gamma$有$(\mathscr I,\sigma)\Vdash\eta$；
-\item[•]记$\Gamma\models\varphi$，如果对任意Tarski结构$\mathscr I$和$\sigma\in\Sigma_\mathscr I$，$(\mathscr I,\sigma)\Vdash\Gamma$蕴含$(\mathscr I,\sigma)\Vdash\varphi$；
-\item[•]$\varphi$和$\psi$\textbf{等价}，若$\varphi\models\psi$且$\psi\models\varphi$；
-\item[•]称$\varphi$\textbf{普遍有效}（\textit{valid}），若$\emptyset\models\varphi$。普遍有效式就是一阶逻辑中的\textbf{永真式}。
-\end{enumerate}
+\begin{itemize}
+\item 记$(\mathscr I,\sigma)\Vdash\Gamma$，如果对一切$\eta\in\Gamma$有$(\mathscr I,\sigma)\Vdash\eta$；
+\item 记$\Gamma\models\varphi$，如果对任意Tarski结构$\mathscr I$和$\sigma\in\Sigma_\mathscr I$，$(\mathscr I,\sigma)\Vdash\Gamma$蕴含$(\mathscr I,\sigma)\Vdash\varphi$；
+\item $\varphi$和$\psi$\textbf{等价}，若$\varphi\models\psi$且$\psi\models\varphi$；
+\item 称$\varphi$\textbf{普遍有效}（\textit{valid}），若$\emptyset\models\varphi$。普遍有效式就是一阶逻辑中的\textbf{永真式}。
+\end{itemize}
 
 \paragraph{一阶逻辑的重言式}对$\varphi\in FOF$，构造相应的命题逻辑公式$\varphi '$：把$\varphi$中形如$\psi=P(t_1,\cdots ,t_n)$或$\psi =\forall x\eta$的子公式$\psi$分别替换为不同的命题变元$p_\psi$，如果得到的$\varphi'$是命题逻辑的重言式，那么就说$\varphi$是一阶逻辑中的\textbf{重言式}（\textit{tautology}）。注意不同于命题逻辑，一阶逻辑中的重言式一定是普遍有效式，但反过来则不一定成立。例如：对一阶逻辑中的永真式$\varphi=\forall xP(x)\to P(x)$，记$p_1=\forall xP(x)$，$p_2=P(x)$，则$\varphi'=p_1\to p_2$，故不是重言式。
 \section{Hintikka集、Henkin集}
@@ -874,15 +874,15 @@ $\mathscr{I}=\langle\mathcal{D}=\mathbb{N},\mathcal{I}\rangle$，其中$\mathcal
   \item 对判定问题的回答（解）只有一个比特（真或假）。
 \end{enumerate}
 \paragraph{可判定性(decidability)}
-\begin{enumerate}
-  \item[•] 问题$Q$称为\textbf{可判定的}（\emph{decidable}）当且仅当存在一个算法$A$使得对$Q$中的一切实例$q$，计算$A(q)$能终止并给出答案。
- \item[•] 问题$Q$称为\textbf{半可判定的}（\emph{semi-decidable}）当且仅当存在算法$A$使得：对$Q$中成立的$q$，$A(q)$能终止并给出肯定的回答；否则，$A(q)$要么给出否定的回答，要么\textit{不终止}。
-\end{enumerate}
+\begin{itemize}
+  \item  问题$Q$称为\textbf{可判定的}（\emph{decidable}）当且仅当存在一个算法$A$使得对$Q$中的一切实例$q$，计算$A(q)$能终止并给出答案。
+ \item  问题$Q$称为\textbf{半可判定的}（\emph{semi-decidable}）当且仅当存在算法$A$使得：对$Q$中成立的$q$，$A(q)$能终止并给出肯定的回答；否则，$A(q)$要么给出否定的回答，要么\textit{不终止}。
+\end{itemize}
 \paragraph{停机问题(The Halting Problem)}\textbf{停机问题}中，给定一个计算机程序$A$和给程序的输入$I$，然后要判断程序在这一输入下最终是否会终止运行。
-\begin{enumerate}
-\item[•]如果程序终止，我们就得出了结论。
-\item[•]如果经过任意长的时间后程序还在运行，我们就不知道程序是不会终止，还是我们等待得不够久。
-\end{enumerate}
+\begin{itemize}
+\item 如果程序终止，我们就得出了结论。
+\item 如果经过任意长的时间后程序还在运行，我们就不知道程序是不会终止，还是我们等待得不够久。
+\end{itemize}
 \begin{center}
 \includegraphics[scale=0.4]{halting.png}
 \end{center}
@@ -1072,12 +1072,12 @@ P & ::= \kw{skip} \mid \mathit{Id} := \mathit{Exp} \mid \mathit{Id}[\mathit{Exp}
 \section{其他算法}
 \paragraph{命题逻辑可满足性的Tableau算法}
 一个命题逻辑的公式是可满足的，当且仅当它有协调的\textbf{表推演}（\textit{tableau}）。
-\begin{enumerate}
-\item[•]公式集$\Gamma$是可满足的，当且仅当$\bigwedge\limits_{\varphi\in\Gamma}\varphi$是可满足的；
-\item[•]以$\varphi$为根构造一棵树，一直按语义满足的条件展开到原子命题；
-\item[•]$\Gamma$是表推演，当且仅当$\Gamma\subseteq AP\cup\{\neg p\mid p\in AP\}$；
-\item[•]$\Gamma$是协调的，当且仅当$\nexists a\in AP, a,\neg a\in\Gamma$。
-\end{enumerate}
+\begin{itemize}
+\item 公式集$\Gamma$是可满足的，当且仅当$\bigwedge\limits_{\varphi\in\Gamma}\varphi$是可满足的；
+\item 以$\varphi$为根构造一棵树，一直按语义满足的条件展开到原子命题；
+\item $\Gamma$是表推演，当且仅当$\Gamma\subseteq AP\cup\{\neg p\mid p\in AP\}$；
+\item $\Gamma$是协调的，当且仅当$\nexists a\in AP, a,\neg a\in\Gamma$。
+\end{itemize}
 \paragraph{二分查找(binary search)}给定一个有序数组\texttt{array}，找出给定元素\texttt{value}的下标，如果不出现则返回\textbf{length}(\texttt{array})。复杂度为$O(\log n)$。
 \begin{algorithmic}
 		\Proc{indexOfSorted}{value,array}
@@ -1127,10 +1127,10 @@ P & ::= \kw{skip} \mid \mathit{Id} := \mathit{Exp} \mid \mathit{Id}[\mathit{Exp}
 \textbf{读入字符串} $a_0,a_1,\cdots ,a_{n-1}$
 
 \textbf{运行} $s_0,s_1,\cdots ,s_n$
-\begin{enumerate}
-\item[•]$s_0\in S_0$
-\item[•]$s_{i+1}\in\rho(s_i,a_i)$，对$i\geq 0$
-\end{enumerate}
+\begin{itemize}
+\item $s_0\in S_0$
+\item $s_{i+1}\in\rho(s_i,a_i)$，对$i\geq 0$
+\end{itemize}
 
 \textbf{接受} $s_n\in F$
 
